@@ -1,17 +1,8 @@
-"""
-Unit Tests for Calculator
-Students start with 2 passing tests, then add more
-"""
 import sys
 import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
 import pytest
-
-# Add the src/ folder to sys.path so calculator.py is discoverable
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
-
 from calculator import add, subtract, multiply, divide, power, square_root
-print("Functions imported into test_calculator.py:", add, subtract, multiply, divide, power, square_root)
-
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
