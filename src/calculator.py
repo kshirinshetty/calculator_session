@@ -19,9 +19,9 @@ def subtract(a, b):
 
 def multiply(a, b):
     """Multiply two numbers with input validation."""
-    if type(a) not in (int, float) or type(b) not in (int, float):
+    if (type(a) not in (int, float)) or (type(b) not in (int, float)):
         raise TypeError("Both arguments must be numbers")
-    return a * b
+    return (a * b)
 
 def divide(a, b):
     """Divide two numbers with input validation."""
