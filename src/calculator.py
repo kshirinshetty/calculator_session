@@ -3,12 +3,6 @@ Calculator Module - Basic arithmetic operations
 Students will extend this with more functions
 """
 
-import pytest
-from calculator import multiply, divide, add, subtract, power, square_root
-
-
-from calculator import add, subtract, multiply, divide, power, square_root
-
 def add(a, b):
     """Add two numbers together"""
     return a + b
