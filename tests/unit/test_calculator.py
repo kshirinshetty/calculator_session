@@ -9,11 +9,9 @@ import pytest
 # Add the src/ folder to sys.path so calculator.py is discoverable
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
 
-from calculator_session.src.calculator import add, subtract, multiply, divide, power, square_root
-print("Imported from calculator.py:", dir())
+from calculator import add, subtract, multiply, divide, power, square_root
+print("Functions imported into test_calculator.py:", add, subtract, multiply, divide, power, square_root)
 
-import calculator
-print("Functions available in calculator.py:", dir(calculator))
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
