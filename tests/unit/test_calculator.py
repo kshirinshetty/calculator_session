@@ -9,7 +9,7 @@ import pytest
 # Add the src/ folder to sys.path so calculator.py is discoverable
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
 
-from calculator import add, subtract, multiply, divide, power, square_root
+from src/calculator.py import add, subtract, multiply, divide, power, square_root
 print("Functions imported into test_calculator.py:", add, subtract, multiply, divide, power, square_root)
 
 
