@@ -32,6 +32,12 @@ class TestMultiplyDivideWithValidation:
         assert divide(6, 3) == 2
         assert divide(-6, 2) == -3
 
+    def test_multiply_input_validation():
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            multiply("5", 3)
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            multiply(2, None)
+    
     def test_divide_input_validation(self):
         with pytest.raises(TypeError, match="Both arguments must be numbers"):
             divide("10", 2)
