@@ -13,23 +13,24 @@ def subtract(a, b):
 
 def multiply(a, b):
     """Multiply two numbers."""
-    if type(a) not in (int, float) or type(b) not in (int, float):
-        raise TypeError("Inputs must be numbers")
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both arguments must be numbers")
     print("Multiplying:", a, "x", b)
     return a * b
 
 def divide(a, b):
     """Divide a by b."""
-    if type(a) not in (int, float) or type(b) not in (int, float):
-        raise TypeError("Inputs must be numbers")
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both arguments must be numbers")
     if b == 0:
         raise ZeroDivisionError("Cannot divide by zero")
     print("Dividing:", a, "/", b)
     return a / b
+
 def power(a, b):
     """Raise a to the power of b."""
-    if type(a) not in (int, float) or type(b) not in (int, float):
-        raise TypeError("Inputs must be numbers")
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise TypeError("Both arguments must be numbers")
     print("Power:", a, "^", b)
     return a ** b
 
