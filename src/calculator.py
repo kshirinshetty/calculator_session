@@ -2,9 +2,10 @@
 Calculator Module - Basic arithmetic operations
 Students will extend this with more functions
 """
-import sys
-import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
+import pytest
+from calculator import multiply, divide, add, subtract, power, square_root
+
 
 from calculator import add, subtract, multiply, divide, power, square_root
 
