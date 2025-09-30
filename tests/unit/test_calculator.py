@@ -23,18 +23,49 @@ class TestBasicOperations:
         assert subtract(10, 4) == 6
 
 class TestMultiplyDivideWithValidation:
-    """Test multiplication and division with input validation."""
-    
+    def test_multiply_valid(self):
+        assert multiply(2, 3) == 6
+        assert multiply(-2, 3) == -6
+        assert multiply(0, 5) == 0
+
     def test_multiply_input_validation(self):
-        """Test multiply rejects non-numeric inputs."""
         with pytest.raises(TypeError, match="Both arguments must be numbers"):
             multiply("5", 3)
         with pytest.raises(TypeError, match="Both arguments must be numbers"):
-            multiply(5, "3")
-    
-    def test_divide_input_validation(self):
-        """Test divide rejects non-numeric inputs."""
-        with pytest.raises(TypeError, match="Division requires numeric inputs"):
-            divide("10", 2)
+            multiply(2, None)
 
-# TODO: Students will add TestMultiplyDivide class
+    def test_divide_valid(self):
+        assert divide(6, 3) == 2
+        assert divide(-6, 2) == -3
+
+    def test_divide_input_validation(self):
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            divide("10", 2)
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            divide(10, "2")
+
+    def test_divide_by_zero(self):
+        with pytest.raises(ZeroDivisionError, match="Cannot divide by zero"):
+            divide(5, 0)
+
+class TestPowerSquareRoot:
+    def test_power_valid(self):
+        assert power(2, 3) == 8
+        assert power(5, 0) == 1
+
+    def test_power_input_validation(self):
+        with pytest.raises(TypeError, match="Both arguments must be numbers"):
+            power("2", 3)
+
+    def test_square_root_valid(self):
+        assert square_root(16) == 4
+        assert square_root(0) == 0
+
+    def test_square_root_input_validation(self):
+        with pytest.raises(TypeError, match="Input must be a number"):
+            square_root("9")
+
+    def test_square_root_negative(self):
+        with pytest.raises(ValueError, match="Cannot take square root of a negative number"):
+            square_root(-4)
+
