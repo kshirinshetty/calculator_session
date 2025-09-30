@@ -2,6 +2,11 @@
 Calculator Module - Basic arithmetic operations
 Students will extend this with more functions
 """
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
+from calculator import add, subtract, multiply, divide, power, square_root
 
 def add(a, b):
     """Add two numbers together"""
