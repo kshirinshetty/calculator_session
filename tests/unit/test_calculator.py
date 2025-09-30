@@ -6,9 +6,11 @@ import sys
 import os
 import pytest
 
-# Add the project root to sys.path so we can import calculator.py
+# Add project root to sys.path so Python can find calculator.py
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
 from calculator import add, subtract, multiply, divide, power, square_root
+
 
 
 class TestBasicOperations:
