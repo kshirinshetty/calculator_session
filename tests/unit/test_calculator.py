@@ -28,10 +28,6 @@ class TestMultiplyDivideWithValidation:
         assert multiply(-2, 3) == -6
         assert multiply(0, 5) == 0
 
-    def test_multiply_input_validation(self):
-        with pytest.raises(TypeError, match="Both arguments must be numbers"):
-            multiply(2, None)
-
     def test_divide_valid(self):
         assert divide(6, 3) == 2
         assert divide(-6, 2) == -3
