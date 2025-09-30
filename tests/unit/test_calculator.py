@@ -2,8 +2,12 @@
 Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
-import pytest
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
 from calculator import add, subtract, multiply, divide, power, square_root
+
 
 class TestBasicOperations:
     """Test basic arithmetic operations"""
